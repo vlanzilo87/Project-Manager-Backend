@@ -2,8 +2,7 @@
   "name": "project-manager-backend",
   "version": "1.0.0",
   "engines": {
-    "node": "13.7.0",
-    "npm": "6.13.6"
+    "node": "13.7.0"
   },
   "description": "",
   "main": "server.js",
