@@ -7,11 +7,11 @@ const blogController = require('./controllers/blog.js')
 
 const PORT = process.env.PORT || 3003
 
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/blog'
 
 
 
-const whitelist = ['http://localhost:3000', 'https://project-finder-team-front.herokuapp.com/']
+const whitelist = ['http://localhost:3000', 'https://project-finder-team-front.herokuapp.com/', 'https://project-finder-team-backend.herokuapp.com/']
 
 const corsOptions = {
   origin: function (origin, callback) {
