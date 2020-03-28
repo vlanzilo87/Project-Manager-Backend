@@ -8,7 +8,7 @@ require('dotenv').config()
 
 const PORT = process.env.PORT || 3003
 
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/blogs'
+const mongoURI = process.env.MONGODBURI || 'mongodb://localhost:27017/blogs'
 
 const whitelist = ['http://localhost:3000', 'https://project-finder-team-front.herokuapp.com/', 'https://project-finder-team-backend.herokuapp.com/']
 
