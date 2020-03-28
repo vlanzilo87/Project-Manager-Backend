@@ -2,13 +2,14 @@ const express = require('express')
 const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 const app = express()
+const cors = require('cors')
 const blogController = require('./controllers/blog.js')
 
 const PORT = process.env.PORT || 3003
 
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'
 
-const cors = require('cors')
+
 
 const whitelist = ['http://localhost:3000', 'https://project-finder-team-front.herokuapp.com/']
 
