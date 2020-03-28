@@ -7,7 +7,7 @@ const blogController = require('./controllers/blog.js')
 
 const PORT = process.env.PORT || 3003
 
-const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/blog'
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/blogs'
 
 
 
