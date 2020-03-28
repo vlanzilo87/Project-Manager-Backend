@@ -4,12 +4,11 @@ const mongoose = require('mongoose')
 const app = express()
 const cors = require('cors')
 const blogController = require('./controllers/blog.js')
+require('dotenv').config()
 
 const PORT = process.env.PORT || 3003
 
 const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/blogs'
-
-
 
 const whitelist = ['http://localhost:3000', 'https://project-finder-team-front.herokuapp.com/', 'https://project-finder-team-backend.herokuapp.com/']
 
