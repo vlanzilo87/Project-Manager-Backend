@@ -6,7 +6,7 @@ const blogController = require('./controllers/blog.js')
 
 const PORT = process.env.PORT || 3003
 
-const MONGODB_URI = process.env.MONGODB_URI
+const mongoURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/'
 
 const cors = require('cors')
 
@@ -23,7 +23,7 @@ const corsOptions = {
 }
 app.use(cors(corsOptions))
 
-mongoose.connect(MONGODB_URI, {useUnifiedTopology: true, useNewUrlParser: true})
+mongoose.connect(mongoURI, {useUnifiedTopology: true, useNewUrlParser: true})
 mongoose.connection.on('error', error => { console.log(error.message + 'Mongo running properly?')})
 mongoose.connection.on('disconnected', ()=> console.log('Mongoose Disconnected'))
 mongoose.connection.once('open', () => {console.log('Mongoose Connected')})
